@@ -13,6 +13,8 @@
 (def currencies {:usd (->Currency 100 "USD" "US Dollars")
                  :eur (->Currency 100 "EUR" "Euro")})
 
+(def zero-dollars (->Money 0 (:usd currencies)))
+
 (defn- validate-same-currency
   [m1 m2]
   (or (= (:currency m1) (:currency m2))
