@@ -19,5 +19,3 @@
   quantitities with unit conversion if necessary."
   [{q1 :quantity u1 :unit :as i1} {q2 :quantity u2 :unit}]
   (assoc i1 :quantity (+ q1 (convert u2 u1 q2))))
-
-
